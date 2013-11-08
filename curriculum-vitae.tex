@@ -9,15 +9,18 @@
 \usepackage{array}
 \usepackage{titlesec}
 \usepackage{graphicx}
+\usepackage{hyperref}
 
 \definecolor{lightgray}{gray}{0.8}
 \definecolor{darkgray}{gray}{0.35}
 \newcolumntype{L}{>{\raggedleft}p{0.14\textwidth}}
 \newcolumntype{R}{p{0.8\textwidth}}
 \newcommand\VRule{\color{lightgray}\vrule width 0.5pt}
-\newcommand{\emphcolor}{\color{NavyBlue}}
-\newcommand{\cemph}[1]{{\emphcolor #1}}
-\titleformat{\section}{\emphcolor\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.2pt]}]
+\newcommand{\emphcolor}{NavyBlue}
+\newcommand{\cemph}[1]{{\color{\emphcolor} #1}}
+\titleformat{\section}{\color{\emphcolor}\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.2pt]}]
+
+\hypersetup{colorlinks=true, urlcolor=\emphcolor}
 
 \begin{document}
 \thispagestyle{empty}
@@ -45,7 +48,7 @@
 
 % Photo
 \begin{textblock}{7}(12.9,0.4)
-	{\emphcolor\fbox{\includegraphics{photo-min}}}
+	{\color{\emphcolor}\fbox{\includegraphics{photo-min}}}
 \end{textblock}
 
 % Destinataire
@@ -72,7 +75,9 @@
 	& \begin{itemize}
 		\item Sécurité informatique et \textit{pentests}, mathématiques pour l'ingénieur,
 	protocoles réseau, administration système~(linux), outils de gestion de projet, divers.
-		\item\textit{Pentest box} Android, serveur SMS, divers.
+		\item Logiciel opensource \href	{https://github.com/yoannsculo/JobCatcher}{JobCatcher},
+			\textit{Pentest box} Android, serveur SMS embarqué, agent de notification
+			pour \textit{desktop} gnome.
 		\item Londres, Oxford, Canterbury (RU) ; Bavière (Allemagne) ; Belgrade, Ra\v{c}a (Serbie) ;
 			France (nombreuses villes) ; Barcelone (Espagne) ; Vietnam (circuit touristique).
 	\end{itemize}\\

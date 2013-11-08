@@ -5,13 +5,18 @@
 \usepackage[utf8]{inputenc}
 \usepackage[french]{babel}
 \usepackage[absolute]{textpos}
-\usepackage{color}
+\usepackage[usenames,dvipsnames]{color}
 \usepackage{array}
+\usepackage{titlesec}
+\usepackage{graphicx}
 
 \definecolor{lightgray}{gray}{0.8}
 \newcolumntype{L}{>{\raggedleft}p{0.14\textwidth}}
 \newcolumntype{R}{p{0.8\textwidth}}
 \newcommand\VRule{\color{lightgray}\vrule width 0.5pt}
+\newcommand{\emphcolor}{\color{NavyBlue}}
+\newcommand{\cemph}[1]{{\emphcolor #1}}
+\titleformat{\section}{\emphcolor\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.2pt]}]
 
 \begin{document}
 \thispagestyle{empty}
@@ -31,6 +36,11 @@
 	\end{tabular}
 \end{textblock}
 
+% Photo
+\begin{textblock}{7}(12.9,0.4)
+	\includegraphics{photo-min}
+\end{textblock}
+
 % Destinataire
 % YAPA
 
@@ -38,7 +48,7 @@
 \begin{textblock}{16}(0,2.55)
 	\centering
 	\fontsize{15pt}{18pt}\selectfont
-	\textsc{Jeune ingénieur passionné, cherche emploi r\&d systèmes embarqués}
+	\cemph{\textsc{Jeune ingénieur passionné, cherche emploi r\&d systèmes embarqués}}
 \end{textblock}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

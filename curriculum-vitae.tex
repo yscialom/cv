@@ -11,6 +11,7 @@
 \usepackage{graphicx}
 
 \definecolor{lightgray}{gray}{0.8}
+\definecolor{darkgray}{gray}{0.35}
 \newcolumntype{L}{>{\raggedleft}p{0.14\textwidth}}
 \newcolumntype{R}{p{0.8\textwidth}}
 \newcommand\VRule{\color{lightgray}\vrule width 0.5pt}
@@ -27,7 +28,6 @@
 \begin{textblock}{7}(0.2,0.4)
 	\begin{tabular}{l}
 		\small
-		Yankel \textsc{Scialom}\\
 		Hameau Les Vaux,\\ 77370 Rampillon\\
 		26 ans (1987-04-24)\\
 		tél. : 06 87 63 83 13\\
@@ -36,9 +36,16 @@
 	\end{tabular}
 \end{textblock}
 
+% Name
+\begin{textblock}{7}(7.5,1.2)
+	{\Huge Yankel \textsc{Scialom}}
+	
+	\vspace{1em}\hspace{3em}{\large\color{darkgray}\textit{Ingénieur systèmes embarqués}}
+\end{textblock}
+
 % Photo
 \begin{textblock}{7}(12.9,0.4)
-	\includegraphics{photo-min}
+	{\emphcolor\fbox{\includegraphics{photo-min}}}
 \end{textblock}
 
 % Destinataire

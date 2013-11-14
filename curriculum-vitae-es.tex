@@ -1,153 +1,125 @@
-\documentclass[10pt]{article}
-\usepackage[margin=1.5cm]{geometry}
-\usepackage{lmodern}
-\usepackage[T1]{fontenc}
+\documentclass[10pt,a4paper]{moderncv}
+
+\moderncvtheme[blue]{ysc} 
 \usepackage[utf8]{inputenc}
-\usepackage[french]{babel}
-\usepackage[absolute]{textpos}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{array}
-\usepackage{titlesec}
-\usepackage{graphicx}
-\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[scale=0.86]{geometry}
 
-\definecolor{lightgray}{gray}{0.8}
-\definecolor{darkgray}{gray}{0.35}
-\newcolumntype{L}{>{\raggedleft}p{0.14\textwidth}}
-\newcolumntype{R}{p{0.8\textwidth}}
-\newcommand\VRule{\color{lightgray}\vrule width 0.5pt}
-\newcommand{\emphcolor}{NavyBlue}
-\newcommand{\cemph}[1]{{\color{\emphcolor} #1}}
-\titleformat{\section}{\color{\emphcolor}\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.2pt]}]
+\usepackage{enumitem}
+\setitemize{leftmargin=20pt}
 
-\hypersetup{colorlinks=true, urlcolor=\emphcolor}
+\firstname{Yankel}
+\familyname{Scialom}
+\title{Ingénieur Systèmes Embarqués}
+\email{yankel.scialom@mail.com}
+\extrainfo{%
+       \href{http://github.com/yscialom}{github.com/yscialom}\makenewline
+       \href{http://fr.linkedin.com/pub/yankel-scialom/85/596/8b7/}{profil Linkedin}\makenewline
+       26 ans --- permis B}
+\photo[64pt]{ysc} 
+\quote{Jeune ingénieur passionné, cherche emploi R\&{}D systèmes embarqués}
+\phone{+336 87 63 83 13}
 
+\AtBeginDocument{
+    \hypersetup{
+       pdftitle      = {Yankel Scialom -- Ingénieur Systèmes Embarqués - Linux/Android -- CV},
+       pdfsubject    = {CV de Yankel Scialom},
+       pdfkeywords   = {Yankel Scialom, CV, curriculum vitæ, CV, linux, embarqué, ingénieur systèmes embarqués, C, bash, shell, intégration, android}}
+}
+
+\nopagenumbers{}                         
 \begin{document}
-\thispagestyle{empty}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%	HEADER
+\maketitle
 
-% Informations personnelles
-\begin{textblock}{7}(0.2,0.4)
-	\begin{tabular}{l}
-		\small
-		Hameau Les Vaux,\\ 77370 Rampillon\\
-		26 ans (1987-04-24)\\
-		tél. : 06 87 63 83 13\\
-		mél. : \texttt{yankel.scialom@mail.com}\\
-		Permis B
-	\end{tabular}
-\end{textblock}
+%%%
+\section{Compétences}
+\cvlineWithMargin{Développement embarqué}{%
+       C/C++, ASM, VHDL, Java pour Android, noyau linux, fonctionnement d'un ALU, ...
+}
+\cvlineWithMargin{Langages de développement}{%
+       C/C++ (Qt, Boost), Java EE (Servlet, EJB,	JDBC, ...), Web (Linux, Apache,
+       [My|Psotgre]SQL, PHP, HTML, CSS, Javascript, jQuery[-ui], ...).
+}
+\cvlineWithMargin{Divers outils et langages généraux}{%
+       OCaml, Lisp, ActionScript, VirtualBasic, python, Delphi, bash, réseaux,
+       administration système, ...
+}
+\cvlineWithMargin{Protocoles}{%
+       CAN, UART, I2C, SPI, USB, GPS, TCP/IP, FTP, HTTP, DNS ...
+}
+\cvlineWithMargin{Outils}{%
+       Git, SVN, Trac, suivis de bugs --- méthodes agiles et cycle en V.
+}
+\cvlineWithMargin{Divers}{%
+       Licences Open-Source --- Lecture de \textit{datasheets} --- schémas
+       éléctroniques --- Conception de documentation.
+}
+%%%
+\section{Expériences professionnelles}
+%%
+\cventry{2012}{Ingénieur R\&{}D système embarqué}{Sysnav}{Vernon}{France}{%
+Conception \& développement, test \& documentation d’un système d’exploitation
+temps-réel pour micro-contrôleur Renesas.
+}
+%%
+\cventry{2010}{Développeur junior}{\textsc{Thales Optronique} S.A.}{Elancourt}{France}{%
+Développement d’une interface homme-machine pour une suite logicielle de
+gestion de drones aériens.
+}
+%%
+\cventry{2013--présent}{Autoformation, projets divers, voyages}{}{}{}{%
+\begin{itemize}
+       \item Sécurité informatique et \textit{pentests}, mathématiques pour l'ingénieur,
+              protocoles réseau, administration système~(linux), outils de gestion de projet, divers.
+       \item Logiciel opensource \href	{https://github.com/yoannsculo/JobCatcher}{JobCatcher},
+              \textit{Pentest box} Android, serveur SMS embarqué, agent de notification
+              pour \textit{desktop} gnome.
+       \item Londres, Oxford, Canterbury (RU) ; Bavière (Allemagne) ; Belgrade, Ra\v{c}a (Serbie) ;
+              France (nombreuses villes) ; Barcelone (Espagne) ; Vietnam (circuit touristique).
+\end{itemize}
+}
+%%
+\cventry{Juillet 2008}{Traducteur, technicien réseau}{\textsc{Battenfeld} France S.A.A}{Villepinte}{France}{%
+\begin{itemize}
+       \item Traduction Allemand/Anglais/Français de documentations techniques
+              de presses hydroliques.
+       \item Étude de fonctionnalités réseau d’un système embarqué Windows.
+\end{itemize}
+}
+%%
+\cventry{2005--2012}{Professeur particuliers et divers jobs d'été}{}{Troyes}{France}{%
+\begin{itemize}
+       \item Cours de remise à niveau et préparation au Baccalauréat en mathématiques,
+              physique-chimie et biologie
+       \item Écaissier, magasinier, vendeur, etc.
+\end{itemize}
+}
 
-% Name
-\begin{textblock}{7}(7.5,1.2)
-	{\Huge Yankel \textsc{Scialom}}
-	
-	\vspace{1em}\hspace{3em}{\large\color{darkgray}\textit{Ingénieur systèmes embarqués}}
-\end{textblock}
+%%%
+\section{Formation}
+\cventry{2005--2012}{%
+       Diplôme d’ingénieur en Systèmes d’Information et Télécommunications
+}{Université de technologie de Troyes}{Troyes}{France}{%
+       Specialité technologies mobiles et systèmes embarqués.\newline
+       Validation de la première année en systèmes mécaniques en 2009.
+}
 
-% Photo
-\begin{textblock}{7}(12.9,0.4)
-	{\color{\emphcolor}\fbox{\includegraphics{photo-min}}}
-\end{textblock}
+%%%
+\section{Langues}
+\cvlanguage{Français}{Langue maternelle}{}
+\cvlanguage{Anglais}{Courant}{BULATS : B2 en 2010, amélioré depuis.}
+\cvlanguage{Allemand}{Notions}{Bon niveau scolaire en 2006.}
+\cvlanguage{Serbo-croate}{Apprentissage}{Méthode ASSIMIL.}
 
-% Destinataire
-% YAPA
-
-% Accroche
-\begin{textblock}{16}(0,2.55)
-	\centering
-	\fontsize{15pt}{18pt}\selectfont
-	\cemph{\textsc{Jeune ingénieur passionné, cherche emploi r\&d systèmes embarqués}}
-\end{textblock}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%	BODY
-
-\fontsize{10pt}{10pt}\selectfont
-\begin{textblock}{14}(0.5,3)
-
-% jobs
-	\section*{Expériences professionnelles}
-	\begin{tabular}{L!{\VRule}R}
-	%
-	2013--présent&{\bf Auto-formation, projets divers, voyages}\\
-	& \begin{itemize}
-		\item Sécurité informatique et \textit{pentests}, mathématiques pour l'ingénieur,
-	protocoles réseau, administration système~(linux), outils de gestion de projet, divers.
-		\item Logiciel opensource \href	{https://github.com/yoannsculo/JobCatcher}{JobCatcher},
-			\textit{Pentest box} Android, serveur SMS embarqué, agent de notification
-			pour \textit{desktop} gnome.
-		\item Londres, Oxford, Canterbury (RU) ; Bavière (Allemagne) ; Belgrade, Ra\v{c}a (Serbie) ;
-			France (nombreuses villes) ; Barcelone (Espagne) ; Vietnam (circuit touristique).
-	\end{itemize}\\
-	
-	%
-	2012 & {\bf \textsc{Sysnav}, stage de fin d'études}\\
-	& Conception \& développement, test \& documentation d'un système d'exploitation
-	temps-réel pour micro-contrôleur \textsc{Renesas}.\\
-	
-	%
-	\rule{0pt}{3ex}2010 & {\bf \textsc{Thales Optronique} S.A., stage professionel}\\
-	& Développement d’une interface homme-machine pour une suite logicielle de
-	gestion de drones aériens.\\
-	
-	%
-	\rule{0pt}{3ex}Juillet 2008 & {\bf \textsc{Battenfeld} France S.A.S.}\\
-	& Traduction Allemand/Anglais/Français de documentations techniques de presses hydroliques ;\\
-	& étude de fonctionnalités réseau d’un système embarqué Windows.\\
-	
-	%
-	\rule{0pt}{3ex}2005--2012 & {\bf Cours particuliers et divers jobs d'été}\\
-	& Cours de remise à niveau et préparation au Baccalauréat en mathématiques,
-	physique-chimie et biologie ;\\
-	& caissier, magasinier, vendeur, etc.
-	\end{tabular}
-
-% studies
-	\section*{Formation}
-	\begin{tabular}{L!{\VRule}R}
-	%
-	2012 & {\bf Université de technologies de Troyes}\\
-	& Obtention du diplôme d'ingénieur en systèmes d'informations et télécommunication,
-	spécialité technologies mobiles et systèmes embarqués, mineur gestion d'entreprise.\\
-	
-	%
-	\rule{0pt}{3ex}2010 & {\bf \textsc{Bullats}}\\
-	& Obtention du diplôme de langue, niveau européen B2 en anglais.\\
-	
-	%
-	\rule{0pt}{3ex}2008 & Validation de la première année du cycle d'ingénieur en systèmes mécaniques.\\
-	
-	%
-	\rule{0pt}{3ex}2005 & {\bf Baccalauréat Scientifique}\\
-	& spécialité mathématiques, obtention avec mention.
-	\end{tabular}
-
-% misc.
-	\section*{Divers}
-	\begin{tabular}{L!{\VRule}R}
-	%
-	& {\bf Connaissances technologiques}\\
-	& \begin{itemize}
-		\item Outils et langages liés aux technologies embarqués : C/C++, ASM, VHDL,
-	Java pour Android, noyau linux, fonctionnement d'un ALU, etc..
-		\item Langages de développement :  C/C++ (Qt, Boost), Java EE (Servlet, EJB,
-	JDBC, ...), Web (Linux, Apache, [My|Psotgre]SQL, PHP, HTML, CSS, Javascript,
-	jQuery[-ui], ...).
-		\item Divers outils et langages généraux : OCaml, Lisp, ActionScript,
-	VirtualBasic, python, bash, \textit{versionning} (git, svn, trac), suivis de bugs,
-	réseaux, administration système, etc..
-	\end{itemize}\\
-	
-	%
-	\rule{0pt}{3ex} & {\bf Langues}\\
-	& Français (langue maternelle), Anglais (couramment lu/compris, bien écris/parlé ;
-	niveau B2 validé en 2010), Allemand (notions), Serbo-croate (en cours d'apprentissage).\\
-	
-	%
-	\rule{0pt}{3ex} & {\bf Loisirs}\\
-	& Passionné de technologies ; photographe amateur ; cinéphile.
-	\end{tabular}
-\end{textblock}
+%%%
+\section{Autres}
+\cvlineWithMargin{Associatif}{%
+       Président de clubs étudiants de photographie et de jeux de société
+}
+\cvlineWithMargin{Loisirs}{%
+       Cinéphile, photographe amateur, joueur de volley ball, lecteur de bande
+       dessinée, adèpte du \textit{Do It Yourself}, passionné de technologies,
+       abonné à la presse scientifique.
+}
 \end{document}

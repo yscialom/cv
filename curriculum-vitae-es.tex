@@ -4,10 +4,20 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
-\usepackage[top=.4cm, bottom=.3cm, left=.5cm, right=.5cm]{geometry}
+\usepackage[top=1cm, bottom=2cm, left=1cm, right=1cm]{geometry}
+\usepackage{multirow}%,tabularx}
 
 \usepackage{enumitem}
 \setitemize{leftmargin=20pt}
+\setlist[itemize]{itemsep=0pt, topsep=0pt}
+
+\newcommand{\entrysep}{%
+   \vspace{0.75em}
+}
+
+% ------------------------------------------------------------------------------
+%      HEADER
+% ------------------------------------------------------------------------------
 
 \firstname{Yankel}
 \familyname{Scialom}
@@ -32,14 +42,17 @@
 \begin{document}
 \maketitle
 
-%%%
+% ------------------------------------------------------------------------------
+%      COMPÉTENCES
+% ------------------------------------------------------------------------------
+
 \section{Compétences}
 \cvlineWithMargin{Développement embarqué}{%
        C/C++, ASM, VHDL, Java pour Android, noyau linux, fonctionnement d'un ALU, ...
 }
 \cvlineWithMargin{Langages de développement}{%
-       C/C++ (Qt, Boost), Java EE (Servlet, EJB,	JDBC, ...), Web (Linux, Apache,
-       [My|Postgre]SQL, PHP, HTML, CSS, Javascript, jQuery[-ui], ...).
+       C/C++ (Qt, Boost), Java EE (Servlet, EJB,   JDBC, ...), Web (Linux, Apache,
+       [My|Postgre]SQL, PHP, HTML, CSS, Javascript, jQuery[-ui], Node.js ...).
 }
 \cvlineWithMargin{Divers outils et langages généraux}{%
        OCaml, Lisp, ActionScript, VirtualBasic, python, Delphi, bash, réseaux,
@@ -49,29 +62,83 @@
        CAN, UART, I2C, SPI, USB, GPS, TCP/IP, FTP, HTTP, DNS ...
 }
 \cvlineWithMargin{Outils}{%
-       Git, SVN, Trac, suivis de bugs --- méthodes agiles et cycle en V.
+       Git, SVN, ClearCase, Trac, suivis de bugs --- méthodes agiles et cycle en V.
 }
 \cvlineWithMargin{Divers}{%
        Licences Open-Source --- Lecture de \textit{datasheets} --- schémas
-       électroniques --- Conception de documentation.
+       électroniques --- Conception de documentation~--- Bon relationnel.
 }
-%%%
+
+% ------------------------------------------------------------------------------
+%      EXPÉRIENCES
+% ------------------------------------------------------------------------------
+
 \section{Expériences professionnelles}
 %%
-\cventry{2012}{Ingénieur R\&{}D système embarqué}{Sysnav}{Vernon}{France}{%
-Conception \& développement, test \& documentation d’un système d’exploitation
-temps-réel pour micro-contrôleur Renesas.
+% Astek
+\cventry{2014--présent}{
+Ingénieur conception logicielle chez \textsc{Thales Raytheon} Systems}
+{~Astek Industrie}{astek}{Massy}{France}{%
+   \vspace{0.75em}
+   \begin{cvcolumns}
+      \cvcolumn{Architecte et développeur logiciel C++/Java}{%
+         \begin{itemize}
+            \item Conception, développement et intégration de fonctionnalités IHM et communication~;
+            \item mise en place de procédures de tests multi-plateforme~;
+            \item suivi de fait technique.
+         \end{itemize}
+      }
+      \cvcolumn{Manager de centre de service}{%
+         \begin{itemize}
+            \item Assistant au directeur de projet~;
+            \item gestion technique des devis \&{} facturations client.
+         \end{itemize}
+      }
+   \end{cvcolumns}
 }
+\entrysep
+
 %%
-\cventry{2010}{Développeur junior}{\textsc{Thales Optronique} S.A.}{Élancourt}{France}{%
+% Sysnav
+\cventry{2012}{Ingénieur R\&{}D système embarqué}{Sysnav}{sysnav}{Vernon}{France}{%
+   \begin{cvcolumns}
+      \cvcolumn{Conception \&{} développement d'une HAL}{%
+         \begin{itemize}
+            \item Configuration du micro-contrôleur ;
+            \item protocoles de communication (UART, SPI, USB) ;
+            \item utilisation transparente du DMA, de RAM externe/interne, de la configuration de l'ALU ...
+         \end{itemize}
+      }
+      \cvcolumn{Conception d'un système d'exploitation temps-réel}{%
+         \begin{itemize}
+            \item Ordonnanceur ;
+            \item émulation de mémoire statique ;
+            \item virtualisation des E/S pour le programme embarqué.
+         \end{itemize}
+      }
+   \end{cvcolumns}
+%
+   \begin{enumerate}[label=]
+      \item \textbf{Portage de l'API sur desktop Windows et Linux pour simulation \&{} debug.}
+      \item \textbf{Documentation complète de l'API.}
+   \end{enumerate}
+}
+\entrysep
+
+%%
+% TOSA
+\cventry{2010}{Développeur junior}{\textsc{Thales Optronique} S.A.}{thales}{Élancourt}{France}{%
 Développement d’une interface homme-machine pour une suite logicielle de
 gestion de drones aériens.
 }
+\entrysep
+
 %%
-\cventry{2013--présent}{}{}{}{}{%
+% Projets
+\cventry{2013}{}{}{}{}{}{%
        \begin{cvcolumns}
               \cvcolumn{Projets personnels}{%
-                     Logiciel opensource \href	{https://github.com/yoannsculo/JobCatcher}{JobCatcher},
+                     Logiciel opensource \href   {https://github.com/yoannsculo/JobCatcher}{JobCatcher},
                      \textit{Pentest box} Android, serveur SMS embarqué, agent de notification
                      pour \textit{desktop} gnome.
               }
@@ -88,40 +155,31 @@ gestion de drones aériens.
               }
        \end{cvcolumns}
 }
-%%
-\cventry{Juillet 2008}{Traducteur, technicien réseau}{\textsc{Battenfeld} France S.A.S}{Villepinte}{France}{%
-\begin{itemize}
-       \item Traduction Allemand/Anglais/Français de documentations techniques
-              de presses hydroliques.
-       \item Étude de fonctionnalités réseau d’un système embarqué Windows.
-\end{itemize}
-}
-%%
-\cventry{2005--2012}{Professeur particulier et divers jobs d'été}{}{}{}{%
-\begin{itemize}
-       \item Cours de remise à niveau et préparation au Baccalauréat en mathématiques,
-              physique-chimie et biologie
-       \item Caissier, magasinier, vendeur, etc.
-\end{itemize}
-}
 
-%%%
+% ------------------------------------------------------------------------------
+%      FORMATION
+% ------------------------------------------------------------------------------
 \section{Formation}
 \cventry{2005--2012}{%
        Diplôme d’ingénieur en Systèmes d’Information et Télécommunications
-}{Université de technologie de Troyes (UTT)}{Troyes}{France}{%
+}{Université de technologie de Troyes (UTT)}{utt}{Troyes}{France}{%
        Specialité technologies mobiles et systèmes embarqués.\newline
        Validation de la première année en systèmes mécaniques en 2009.
 }
 
-%%%
+% ------------------------------------------------------------------------------
+%      LANGUES
+% ------------------------------------------------------------------------------
 \section{Langues}
 \cvlanguage{Français}{Langue maternelle}{}
 \cvlanguage{Anglais}{Courant}{BULATS : B2 en 2010, amélioré depuis.}
 \cvlanguage{Allemand}{Notions}{Bon niveau scolaire en 2006.}
-\cvlanguage{Serbo-croate}{Apprentissage}{Méthode ASSIMIL.}
+\cvlanguage{Serbo-croate}{Apprentissage}{Méthode ASSIMIL.
+}
 
-%%%
+% ------------------------------------------------------------------------------
+%      AUTRES
+% ------------------------------------------------------------------------------
 \section{Autres}
 \cvlineWithMargin{Associatif}{%
        Président de clubs étudiants de photographie et de jeux de société.
